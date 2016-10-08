@@ -35,3 +35,6 @@ Work in progress. Welcome for new suggestions.
 
 ## Try:
 ```npm start``` or ```node example --repl```
+
+## Screenshot:
+![screenshot](/example/demo.png?raw=true)
