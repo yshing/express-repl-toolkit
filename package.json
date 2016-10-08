@@ -1,0 +1,31 @@
+{
+  "name": "express-repl-toolkit",
+  "version": "1.0.0",
+  "description": "Handy toolkits play with express based apps in repl.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node example --repl",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yshing/express-repl-toolkit.git"
+  },
+  "author": "yshing",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yshing/express-repl-toolkit/issues"
+  },
+  "homepage": "https://github.com/yshing/express-repl-toolkit#readme",
+  "dependencies": {
+    "express": "^4.0.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "express",
+    "repl",
+    "toolkit",
+    "debug",
+    "middleware"
+  ]
+}
