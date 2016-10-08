@@ -1,6 +1,6 @@
 {
   "name": "express-repl-toolkit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Handy toolkits play with express based apps in repl.",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/yshing/express-repl-toolkit#readme",
   "dependencies": {
-    "express": "^4.0.0"
+    "express": ">3.0.0"
   },
   "devDependencies": {},
   "keywords": [

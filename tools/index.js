@@ -2,6 +2,7 @@
 module.exports = function (repl, app){
   var commandList = {};
   var captureReq;
+  var appStack = app._router.stack || app.stack || undefined;
   
   var traceMiddleware = require('./trace-middleware');
 
@@ -12,9 +13,9 @@ module.exports = function (repl, app){
   attachCommand('catchReq', function() {
     if (captureReq === undefined){
       app.use(cmdCaputreReq);
-      if (app._router.stack[app._router.stack.length - 1].handle === cmdCaputreReq){
-        var temp = app._router.stack.pop();
-        app._router.stack.unshift(temp);
+      if (appStack[appStack.length - 1].handle === cmdCaputreReq){
+        var temp = appStack.pop();
+        appStack.unshift(temp);
       }
     }
     captureReq = !captureReq;
@@ -28,6 +29,11 @@ module.exports = function (repl, app){
       next();
     }
   }, 'Capture the reference of next request object and make it accessible as `req`');
+
+  // appStack as command.
+  attachCommand('appStack', function cmdAppStack(){
+    return appStack;
+  }, 'The middleware stack of current app instance');
 
   // help command
   attachCommand('help', function cmdHelp() {
