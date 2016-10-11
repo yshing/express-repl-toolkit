@@ -27,3 +27,8 @@ app.get('/', function (req, res, next){
   res.send('you should never reach me');
 });
 
+var r = express.Router();
+
+r.get('/haha',function (req, res){ res.end('haha');});
+
+app.use('/nested', r);
